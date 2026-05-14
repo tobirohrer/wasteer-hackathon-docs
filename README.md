@@ -14,6 +14,12 @@ You are given the following data which is available here: <link to data>:
 	3D surface scans showing the current fill level (visible waste surface) of the bunker.
 2. **Truck delivery records**  
 	Timestamped list of trucks delivering waste. Each entry includes the waste type and quantity (in kg) delivered into the bunker.
+    - `created_at`: Creation timestamp (UTC, with microseconds).
+    - `entry_timestamp`: Time when vehicle entered/was first weighed.
+    - `entry_weight`: Gross weight on entry (kg, unless otherwise noted).
+    - `exit_timestamp`: Time when vehicle exited/was second weighed.
+    - `exit_weight`: Tare or final weight on exit (kg, unless otherwise noted).
+    - `waste_code`: Material/waste EWC code (e.g., `200301`, `180104`).
 3. **Information per waste type (MISSING)**  
 	Mapping from waste type to calorific value (kJ/kg).
 
@@ -72,15 +78,17 @@ You will be assigned a GPU server (NVIDIA L4 24GB) for the event to be able to t
 
 1. Write an mail to XYZ with your teamname. You will receive your keypair and IP necessary to connect to the server as response.
 2. Connect to your GPU server via SSH `ssh -i <path_to_private_key> hacker@<ip_address>`
-3. Start your environment `start-jupyter`
-4. Create SSH tunnel `ssh -i <private_key_file> -N -L 8888:localhost:8888 hacker@<ip_address>`
-5. Connect to Jupyter Lab by opening your browser and go to `http://localhost:8888`
-6. Start hacking
+3. Activate the preconfigured conda environment on the server `conda activate ml`
+4. Execute `start-jupyter` on the server to start your environment
+5. Execute `ssh -i <private_key_file> -N -L 8888:localhost:8888 hacker@<ip_address>` on your local machine to establish ssh tunneling
+6. Connect to Jupyter Lab by opening your browser and go to `http://localhost:8888`
+7. Start hacking
 
 ## Customizing the Server
 
 - Note that your user `hacker` has passwordless sudo access to the server with your user. You are free to install additional tools and customize the environment as needed 😉
 - The preconfigured environemnt is available as `ml` conda environment. Feel free to create a new one if you like.
+  - You can also install new packages via `pip install` in jupyter lab in jupyterLab terminal. Make sure to `conda activte ml` before installation.  
 
 ## Server Availability
 
