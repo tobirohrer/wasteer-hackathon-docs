@@ -1,6 +1,6 @@
 # Waste Bunker Optimization Challenge
 
-Waste incineration plays a crucial role in modern energy systems by converting non-recyclable waste into usable energy. However, efficient incineration is not just about burning waste. It requires smart bunker management to ensure stable operations, optimal energy yield, and regulatory compliance.
+Waste incineration plays a crucial role in modern energy systems by converting non-recyclable waste into usable energy. However, efficient incineration is not just about burning waste. It requires smart bunker management to ensure stable operations and optimal energy yield.
 
 At Wasteer, our mission is to make waste-to-energy operations more intelligent and data driven. One of the most critical components of this process is the waste bunker, where different waste streams are temporarily stored and mixed before incineration.
 
@@ -15,10 +15,10 @@ You are given the following data which is available here: <link to data>:
 2. **Truck delivery records**  
 	Timestamped list of trucks delivering waste. Each entry includes the waste type and quantity (in kg) delivered into the bunker.
 3. **Information per waste type (MISSING)**  
-	Mapping from waste type to calorific value (kJ/kg, placeholder value).
+	Mapping from waste type to calorific value (kJ/kg).
 
 **Note:**  
-Note: The dataset does not explicitly include information about material removed from the bunker through incineration. Participants are encouraged to make and justify reasonable assumptions where necessary. Partially observable systems and incomplete operational data are common in real industrial environments and are part of the challenge 😉.
+The dataset does not explicitly include information about material removed from the bunker through incineration. Participants are encouraged to make and justify reasonable assumptions where necessary. Partially observable systems and incomplete operational data are common in real industrial environments and are part of the challenge 😉.
 
 # 2. Problem Statement
 
@@ -66,11 +66,11 @@ Determine the optimal waste composition:
 
 # Infrastructure
 
-You will be assigned a GPU server for the event to be able to train models if you would like to. Each team is assigned one server with a preconfigured JupyterLab environment (including torch and tensorflow)
+You will be assigned a GPU server (NVIDIA L4 24GB) for the event to be able to train models if you would like to. Each team is assigned one server with a preconfigured JupyterLab environment (including torch and tensorflow)
 
 ## Connecting to your Server
 
-1. Write an mail to XYZ with your teamname. You will receive your keypair and IP necessary to connect to the server to this mail.
+1. Write an mail to XYZ with your teamname. You will receive your keypair and IP necessary to connect to the server as response.
 2. Connect to your GPU server via SSH `ssh -i <path_to_private_key> hacker@<ip_address>`
 3. Start your environment `start-jupyter`
 4. Create SSH tunnel `ssh -i <private_key_file> -N -L 8888:localhost:8888 hacker@<ip_address>`
