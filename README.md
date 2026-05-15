@@ -11,7 +11,7 @@ For this challenge, you will work with real industrial data to optimize waste bu
 You are given the following data which is available here: <link to data>:
 
 1. **LiDAR scans of the bunker**  
-	3D surface scans showing the current fill level (visible waste surface) of the bunker.
+	3D surface scans showing the current fill level (visible waste surface) of the bunker. A script for reading and exploring the LiDAR data is available at the file downloads.
 2. **Truck delivery records**  
 	Timestamped list of trucks delivering waste. Each entry includes the waste type and quantity (in kg) delivered into the bunker.
     - `created_at`: Creation timestamp (UTC, with microseconds).
@@ -70,6 +70,7 @@ Determine the optimal waste composition:
   - You may define your own reasonable assumption for the initial bunker mass.
   - Select several truck delivery records from the dataset to showcase your approach. Estimate how individual deliveries change the average calorific value inside the bunker and determine which waste type(s) and quantities would be needed to bring it back toward 10 kJ/kg. Remember to consider your learnings from problem 1 to make sure the bunker does not exeed its limits.
 
+
 # Infrastructure
 
 You will be assigned a GPU server (NVIDIA L4 24GB) for the event to be able to train models if you would like to. Each team is assigned one server with a preconfigured JupyterLab environment (including torch and tensorflow)
@@ -90,11 +91,7 @@ You will be assigned a GPU server (NVIDIA L4 24GB) for the event to be able to t
 - The preconfigured environemnt is available as `ml` conda environment. Feel free to create a new one if you like.
   - You can also install new packages via `pip install` in jupyter lab in jupyterLab terminal. Make sure to `conda activte ml` before installation.  
 
-## Server Availability
 
-To manage compute resources efficiently, the GPU servers will be available during the following times:
+## Vibe Coding
 
-- Thursday: XX:00 – XX:00
-- Friday: YY:00 – YY:00
-
-If you need it outsite this timeframes come and talk to us!
+Each team has access to a OpenRouter API key with 20€ budget. See [vibe-coding/](vibe-coding/) for more info
