@@ -83,7 +83,8 @@ You will be assigned a GPU server (NVIDIA L4 24GB) for the event to be able to t
 4. Execute `start-jupyter` on the server to start your environment
 5. Execute `ssh -i <private_key_file> -N -L 8888:localhost:8888 hacker@<ip_address>` on your local machine to establish ssh tunneling
 6. Connect to Jupyter Lab by opening your browser and go to `http://localhost:8888`
-7. Start hacking
+7. The dataset is also already present at the server. You can unpack the data by running `tar -xzf wasteer-hackathon-data.tar.gz`
+8. Start hacking
 
 ## Customizing the Server
 
